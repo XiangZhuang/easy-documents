@@ -4,7 +4,7 @@
 
 Use a non-root user, here I use `es` with user folder at `/home/es`
 
-### 1. Download ElasticSearch Archive under user folder
+### 2. Download ElasticSearch Archive under user folder
 ```
 cd /home/es
 wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.17.0-linux-x86_64.tar.gz
@@ -13,13 +13,13 @@ shasum -a 512 -c elasticsearch-7.17.0-linux-x86_64.tar.gz.sha512
 tar -xzf elasticsearch-7.17.0-linux-x86_64.tar.gz
 ```
 
-### 2. Start ElasticSearch
+### 3. Launch ElasticSearch
 ```
 cd elasticsearch-7.17.0/bin
 elasticsearch -d
 ```
 
-### 3. Check ElasticSearch Status
+### 4. Check ElasticSearch Status
 ```
 ps -ef | grep logstash
 ```
