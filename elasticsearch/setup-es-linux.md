@@ -21,7 +21,7 @@ elasticsearch -d
 
 ### 4. Check ElasticSearch Status
 ```
-ps -ef | grep logstash
+ps -ef | grep elasticsearch
 ```
 
 ### Common Problems
