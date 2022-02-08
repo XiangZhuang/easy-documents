@@ -24,6 +24,25 @@ elasticsearch -d
 ps -ef | grep elasticsearch
 ```
 
+<br/>
+
+### Memory Consumption
+
+ElasticSearch by default consumes 50% of memory.
+
+To set memory consumption manually:
+```
+cd config/jvm.options.d
+touch <some_name>.options
+```
+Inside `<some_name>.options`, add for example:
+```
+-Xms1g
+-Xmx1g
+```
+
+<br/>
+
 ### Common Problems
 
 #### 1. Cannot find java jdk
