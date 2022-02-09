@@ -72,5 +72,17 @@ output {
 #### Approach 1
 - Create multiple `.conf` files under one directory e.g. `/conf`.
 - Inside each `.conf` add tags and conditional statements.
+- When launching logstash, run `./logstash -f <path_to_conf_directory>`
 #### Approach 2
 - Create multiple pipelines, each pipeline pointing to one specific `.conf` file.
+- Implementation
+  - Create multiple `.conf` files
+  - Modify `pipeline.yml`
+    ```
+    - pipeline.id: pipeline_1
+      path.config: "/home/es/logstash-7.17.0/config/pipelines/pipeline_1.conf"
+    - pipeline.id: pipeline_2
+      path.config: "/home/es/logstash-7.17.0/config/pipelines/pipeline_2.conf"
+    - pipeline.id: pipeline_3
+      path.config: "/home/es/logstash-7.17.0/config/pipelines/pipeline_3.conf"
+    ```
