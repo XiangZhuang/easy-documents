@@ -24,6 +24,15 @@ elasticsearch -d
 ps -ef | grep elasticsearch
 ```
 
+### 5. Setup Security
+Security is disabled by default.
+
+Edit `config/elasticsearch.yml`
+- Add `discovery.type: single-node` if running ES on only one instance
+- Add `xpack.security.enabled: true` to enable security
+- After restarting ES, launch a new terminal
+  - run `./bin/elasticsearch-setup-passwords interactive` to set up the password for built-in users
+
 <br/>
 
 ### Memory Consumption
